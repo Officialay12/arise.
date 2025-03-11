@@ -1,0 +1,101 @@
+/* General Styles */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Manga-style font */
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .manga-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Manga Panel */
+  .manga-panel {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border: 5px solid #000;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+  }
+  
+  /* Manga Image */
+  .manga-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the panel */
+  }
+  
+  /* Speech Bubble */
+  .speech-bubble {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border: 3px solid #000;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    max-width: 80%;
+    box-shadow: 3px 3px 5px rgba(76, 191, 245, 0.2);
+  }
+  
+  .speech-bubble::before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 20px;
+    border: 10px solid transparent;
+    border-top-color: #000;
+  }
+  
+  /* Thought Bubble */
+  .thought-bubble {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border: 3px dashed #000;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    max-width: 60%;
+    box-shadow: 3px 3px 5px rgba(33, 95, 228, 0.2);
+  }
+  
+  .thought-bubble::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    border: 10px solid transparent;
+    border-bottom-color: #000;
+  }
+  
+  /* Action Text */
+  .action-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff0000;
+    text-shadow: 2px 2px 0 #000, 4px 4px 0 #000;
+    animation: zoomIn 0.5s ease-in-out;
+  }
+  
+  /* Animation for Action Text */
+  @keyframes zoomIn {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
